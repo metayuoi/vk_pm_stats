@@ -106,8 +106,6 @@ var conf_sent = []
 var autors = {}
 
 function getData(string, offset, hash) {
-
-	
 	
 	if (offset === 0) {
 		p_inbox = []
@@ -215,7 +213,7 @@ function displayResult() {
 	
 	
 	total = filteredIds.reduce(function(sum, key) {return sum + myStore[key]}, 0);
-	if (filteredIds.length > 9) {
+	if (filteredIds.length > 10) {
 		ordered["остальные"] = total - filteredIds.reduce(function(sum, key, i) {if (i<9) {return sum + myStore[key]} else {return sum}}, 0);
 	}
 	
